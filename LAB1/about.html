@@ -16,7 +16,7 @@ in html
         <title> Lab 1: Logan Louks Portfolio</title>
         
         <style>
-         body{
+        body{
                 background-color:black;
                 color:white;
             }
@@ -25,17 +25,21 @@ in html
                 text-align:center;
             }
             
-            nav a{
+             nav a  {
+                font-size: 1.8em;
+                padding: 15px;
+                padding-bottom:4px;
+                color: white;
+            }
+            
+            nav a:hover{
                 padding: 15px;
                 padding-bottom:4px;
                 font-size:1.8em;
                 text-decoration: none;
                 color: white;
-            }
-            nav a :hover {
-                border-bottom: 2px orange solid;
-                font-size: 2em;
                 transition: .9;
+                 border-bottom: 2px orange solid;
             }
             
            table {
@@ -59,10 +63,11 @@ in html
                padding-left:100px;
            }
         
-           footer{
+           footer , #csumbLogo {
                text-align:center;
                 clear: left;
             }
+            
         </style>
     </head>
 <!-- closing head -->
@@ -117,10 +122,10 @@ in html
           </table>
       </div>
       <ul>
-          <li>Sports:</li>
-          <li>Video Games:</li>
-          <li>Music:</li>
-          <li>Miscellaneous:</li>
+          <li>Sports: I come from a sports family. I played Division I Basketball for UCSB. Being from the Bay Area I am a GS Warriors Fan</li>
+          <li>Video Games: Former Gears of War Pro, I own almost every console: Nintendo 64, PlayStation 1-2, Xbox , Xbox 360, Xbox One , and Computer Gaming</li>
+          <li>Music: Personally, I love most music types: Rap, Hip-Hop, Country, Rock, Reggae, and Pop</li>
+          <li>Academics: Graduated from the University of California, Santa Barbara with a BS in Sociology and a Minor in Sports Management. Now working on a second Bachelors Degree in Computer Science from CSU Monterey Bay</li>
       </ul>
       
     </main>
@@ -134,6 +139,7 @@ in html
                 <strong> Disclaimer: <strong>
                   All information in this website belongs to Logan Louks, and is used for Academic and Business purposes.
                   <a href="http://csumb.edu">California State University, Monterey Bay</a>
+                  <img id ="csumbLogo" src="img/csumblogo.png"  alt ="Picture of CSU Monterey logo (Otter)"  />
               
         </footer>
         <!-- closing footer -->
