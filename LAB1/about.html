@@ -16,7 +16,7 @@ in html
         <title> Lab 1: Logan Louks Portfolio</title>
         
         <style>
-            body{
+         body{
                 background-color:black;
                 color:gray;
             }
@@ -38,22 +38,31 @@ in html
                 transition: .9;
             }
             
-            #myPicture{
-                border-radius:40px;
-            }
-            header, main, nav footer {
-                text-align: center;
-            }
-            
-            #me, #welcomeText { 
-            
-            float:left;
-                
-            }
-            footer{
+           table {
+               margin: 0px auto;
+           }
+           td{
+               padding-right:10px;
+               font-size:1.3em;
+           }
+           td strong{
+               color: orange;
+           }
+           #table-header{
+               background-color:#351a00;
+           }
+           .table-row{
+               background-color:#753900;
+           }
+           ul{
+               text-align:left;
+               padding-left:200px;
+           }
+        
+           footer{
+               text-align:center;
                 clear: left;
             }
-            
         </style>
     </head>
 <!-- closing head -->
@@ -65,6 +74,7 @@ in html
         <header>
             <h1>Logan Louks</h1>
             <h2>Portfolio</h2>
+            
         </header>
         
         <hr width="50%"/>
@@ -83,18 +93,35 @@ in html
       
         <figure id = "me">
         
-            <img id ="myPicture" src="https://llouks-llouks.c9users.io/llouks/LAB1/img/logan_louks.jpg"  alt ="Logan Louks's Picture"  />
-        
+           
         </figure>
       
-      <div id="welcomeText">
-      
-        <p> Welcome to my personal website.</p>
-        <p> I am currently a graduate student at CSU Monterey Bay, pursuing a Computer Science Degree with emphasises in: Software Enginneering, Data Science, and Network Security. </p>
-        <p> Feel free to Contact me with any questions you may have. </p>
-        <p><em>Quote: Some people want it to happen, some wish it would happen, others make it happen." - Michael Jordan</em></p>
-      
+      <div id="content">
+          <table>
+              <tr id ="table-header">
+                  <td><strong>Programming Language</strong></td>
+                     <td><strong>Years Experience</strong></td>
+              </tr>
+              <tr class ="table-row">
+                  <td>Java</td>
+                  <td>2</td>
+              </tr>
+                <tr class ="table-row">
+                  <td>C++</td>
+                  <td>2</td>
+              </tr>
+                <tr class ="table-row">
+                  <td>PHP</td>
+                  <td>1</td>
+              </tr>
+          </table>
       </div>
+      <ul>
+          <li>Sports:</li>
+          <li>Video Games:</li>
+          <li>Music:</li>
+          <li>Miscellaneous:</li>
+      </ul>
       
     </main>
         
