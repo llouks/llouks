@@ -13,10 +13,10 @@ in html
 <!-- All styles and javascript go inside the head -->
     <head>
         <meta charset="utf-8"/>
-        <title> Lab 1: Logan Louks Portfolio</title>
+        <title> Homework 1: </title>
         
         <style>
-        body{
+            body{
                 background-color:black;
                 color:white;
             }
@@ -25,6 +25,7 @@ in html
                 text-align:center;
                 font-family: "Brush Script MT", cursive; 
             }
+            
             h1{
                 font-family: "Brush Script MT", cursive; 
                 font-size:3em;
@@ -49,16 +50,31 @@ in html
                  border-bottom: 2px blue solid;
             }
             
-        
-           footer , #csumbLogo {
-               color: white;
-               text-align:center;
-                clear: left;
+            main {
+                  display: grid;
+                  grid-template-columns: 450px 350px;
+                  width:800px;
+                  margin: 0 auto; /*centers containers*/
+                  text-align: center;
+            }
+            #myPicture{
+               border-radius: 40px;
+               float:left;
+            }
+            #welcomeText{
+                float:right;
+                font-size:1.2em;
+            }
+         
+             
+            header, nav , footer {
+                text-align: center;
+                border-radius: 40px;
             }
             
-            div{
-                text-align:center;
-                padding-bottom: 100px;
+             footer , #csumbLogo {
+               text-align:center;
+                clear: left;
             }
             
         </style>
@@ -72,7 +88,6 @@ in html
         <header>
             <h1>Logan Louks</h1>
             <h2>Portfolio</h2>
-            
         </header>
         
         <hr width="50%"/>
@@ -85,29 +100,36 @@ in html
             
         </nav>
         
+          <br /> <br />
+        <br /> <br />
     
     <main>
       
-        <figure>
+        <figure id = "me">
         
-           
+            <img id ="myPicture" src="img/logan_louks.jpg"  alt ="Logan Louks's Picture"  />
+        
         </figure>
       
-      <div >
-          <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfo7McNBXA26kxifj060EzDIY4eBnT_B3E96hO45c0P9R67ng/viewform?embedded=true" width="760" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+      <div id="welcomeText">
+      
+        <p> Welcome to my personal website.</p>
+        <p> I am currently a graduate student at CSU Monterey Bay, pursuing a Computer Science Degree with emphasises in: Software Enginneering, Data Science, and Network Security. </p>
+        <p> Feel free to Contact me with any questions you may have. </p>
+        <p><em>Quote: Some people want it to happen, some wish it would happen, others make it happen." - Michael Jordan</em></p>
+      
       </div>
-      
-    
-      
        
-       
+        <br /> <br />
+        <br /> <br />
+        
     </main>
         
         <!-- This is the footer -->
         <!-- The footer goes inside the body but not always -->
         
         
-         <footer>
+        <footer>
           <hr> CST 336 Internet Programming. 2018 &copy; Logan Louks<br />
                 <strong> Disclaimer: <strong>
                   All information in this website belongs to Logan Louks, and is used for Academic and Business purposes.
@@ -115,12 +137,10 @@ in html
                    <p><img id ="csumbLogo" src="img/csumblogo.png"  alt ="Picture of CSU Monterey logo (Otter)" /></p>
               
         </footer>
+      
         <!-- closing footer -->
         
     </body>
     <!-- closing body -->
 
 </html>
-
-
-
