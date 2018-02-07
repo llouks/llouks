@@ -38,6 +38,7 @@ in html
                 padding: 15px;
                 padding-bottom:4px;
                 color: white;
+                font-family: "Brush Script MT", cursive; 
             }
             
             nav a:hover{
@@ -53,16 +54,19 @@ in html
             main {
                   display: grid;
                   grid-template-columns: 450px 350px;
+                   background-image:url("../img/cryptos.jpg");
                   width:800px;
                   margin: 0 auto; /*centers containers*/
                   text-align: center;
             }
-            #cryptoPicture{
-               border-radius: 40px;
-            }
+            
             #welcomeText{
                 float:right;
                 font-size:1.2em;
+            }
+            
+            #cryptoPicture{
+                padding: 100px;
             }
          
              
@@ -76,6 +80,9 @@ in html
                 clear: left;
             }
             
+            .history{
+                color: blue;
+            }
         </style>
     </head>
 <!-- closing head -->
@@ -85,8 +92,8 @@ in html
     <body>
         
         <header>
-            <h1>Cryptocurreny</h1>
-            <h2>Block-Chain Technology</h2>
+           <h1>Cryptocurreny Insider</h1>
+            <h2>Decentralized | Peer to Peer | Block-Chain Technology</h2>
         </header>
         
         <hr width="50%"/>
@@ -94,7 +101,7 @@ in html
         <nav>
             
             <a href="home.html"> Home </a> 
-            <a href="history.html"> History </a>
+             <a href="history.html"> <span class ="history">History</span></a> 
             <a href="coins.html"> Coins </a> 
             <a href="exchanges.html"> Exchanges </a>
             <a href="contact.html"> Contact Me </a> 
@@ -105,12 +112,6 @@ in html
         <br /> <br />
     
     <main>
-      
-        <figure id = "cryptoPicture">
-        
-            <img id ="myPicture" src="img/cryptos.jpg"  alt ="Picture of cryptocurrencies"  />
-        
-        </figure>
       
       <div id="historyText">
       
@@ -146,9 +147,15 @@ in html
         <a href="https://en.wikipedia.org/wiki/Cryptocurrency#Blockchain"><strong>Cryptocurrency Information</strong></a>
     </p>
       </div>
+      
+       <figure>
+           
+          <iframe width="420" height="345" src="https://www.youtube.com/embed/l9jOJk30eQs"></iframe>
+        
+            <img id ="cryptoPicture" src="img/crypto.jpg"  alt ="Picture of cryptocurrencies" width="500" height="600"  />
+        
+        </figure>
        
-        <br /> <br />
-        <br /> <br />
         
     </main>
         

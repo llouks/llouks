@@ -37,6 +37,7 @@ in html
                 padding: 15px;
                 padding-bottom:4px;
                 color: white;
+                font-family: "Brush Script MT", cursive; 
             }
             
             nav a:hover{
@@ -58,14 +59,17 @@ in html
                   text-align: center;
             }
             
-            
             #welcomeText{
                 float:right;
                 font-size:1.2em;
             }
+            
+            #cryptoPicture{
+                padding: 100px;
+            }
          
              
-            header, footer {
+            header, nav , footer {
                 text-align: center;
                 border-radius: 40px;
             }
@@ -73,6 +77,9 @@ in html
              footer , #csumbLogo {
                text-align:center;
                 clear: left;
+            }
+            .home{
+                color: blue;
             }
             
         </style>
@@ -84,15 +91,15 @@ in html
     <body>
         
         <header>
-            <h1>Cryptocurreny</h1>
-            <h2>Block-Chain Technology</h2>
+            <h1>Cryptocurreny Insider</h1>
+            <h2>Decentralized | Peer to Peer | Block-Chain Technology</h2>
         </header>
         
         <hr width="50%"/>
         
         <nav>
             
-            <a href="home.html"> Home </a> 
+            <a href="home.html"> <span class ="home">Home</span></a> 
             <a href="history.html"> History </a>
             <a href="coins.html"> Coins </a> 
             <a href="exchanges.html"> Exchanges </a>
@@ -101,35 +108,33 @@ in html
         </nav>
         
          <br /> <br />
-        <br /> <br />
     
     <main>
       
-        <figure id = "cryptoPicture">
-        
-            <img id ="myPicture" src="img/cryptos.jpg"  alt ="Picture of cryptocurrencies"  />
-        
-        </figure>
-      
       <div id="welcomeText">
       
-        <p> Welcome to Cryptocurrency Insider.</p>
+        <p> Welcome to <strong>Cryptocurrency Insider</strong>.</p>
+        <br /> <br />
         <p> This site will explain the basics on cryptocurrencies, block-chain 
                 technology, link you to some popular exchanges, and touch on a 
                 few Cryptos. </p>
         <p>  </p>
+        <br /> <br />
         <p><em>Quote: "The governments of the world have spent hundreds and 
                     hundreds of trillions of dollars bailing out a decaying, 
                     dickensian, outmoded system called banking, when the 
                     solution to the future of finance is peer-to-peer. It’s 
                     going to be alternative currencies like Bitcoin and it’s not
                     actually going to be a banking system as we had before 2008."</em></p>
-        <p><em>- Patrick Young</em></p>
+                    <br /> <br />
+        <p><em><strong>- Patrick Young</strong></em></p>
       </div>
-       
-        <br /> <br />
-        <br /> <br />
+      
+       <figure>
         
+            <img id ="cryptoPicture" src="img/crypto.jpg"  alt ="Picture of cryptocurrencies" width="500" height="600"  />
+        </figure>
+       
     </main>
         
         <!-- This is the footer -->
