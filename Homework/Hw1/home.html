@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<!--
+
+First Website
+and comment
+in html
+(comments can span multiple lines)
+
+-->
+
+<!-- This is the head -->
+<!-- All styles and javascript go inside the head -->
+    <head>
+        <meta charset="utf-8"/>
+        <title> Homework 1:Cryptocurrency Website </title>
+        <style>
+            body{
+                background-color:black;
+                color:white;
+            }
+            
+            header, nav{
+                text-align:center;
+                font-family: "Brush Script MT", cursive; 
+            }
+            
+            h1{
+                font-family: "Brush Script MT", cursive; 
+                font-size:3em;
+                color:  blue;
+                
+            }
+            
+             nav a  {
+                font-size: 1.8em;
+                padding: 15px;
+                padding-bottom:4px;
+                color: white;
+                font-family: "Brush Script MT", cursive; 
+            }
+            
+            nav a:hover{
+                padding: 15px;
+                padding-bottom:4px;
+                font-size:1.8em;
+                text-decoration: none;
+                color: white;
+                transition: .9;
+                 border-bottom: 2px blue solid;
+            }
+            
+            main {
+                  display: grid;
+                  grid-template-columns: 450px 350px;
+                   background-image:url("../img/cryptos.jpg");
+                  width:800px;
+                  margin: 0 auto; /*centers containers*/
+                  text-align: center;
+            }
+            
+            #welcomeText{
+                float:right;
+                font-size:1.2em;
+            }
+            
+            #cryptoPicture{
+                padding: 100px;
+            }
+         
+             
+            header, nav , footer {
+                text-align: center;
+                border-radius: 40px;
+            }
+            
+             footer , #csumbLogo {
+               text-align:center;
+                clear: left;
+            }
+            .home{
+                color: blue;
+            }
+            
+        </style>
+    </head>
+<!-- closing head -->
+    <!-- This is the body -->
+    <!-- This is where we place the content of our website -->
+    
+    <body>
+        
+        <header>
+            <h1>Cryptocurreny Insider</h1>
+            <h2>Decentralized | Peer to Peer | Block-Chain Technology</h2>
+        </header>
+        
+        <hr width="50%"/>
+        
+        <nav>
+            
+            <a href="home.html"> <span class ="home">Home</span></a> 
+            <a href="history.html"> History </a>
+            <a href="coins.html"> Coins </a> 
+            <a href="exchanges.html"> Exchanges </a>
+            <a href="contact.html"> Contact Me </a> 
+            
+        </nav>
+        
+         <br /> <br />
+    
+    <main>
+      
+      <div id="welcomeText">
+      
+        <p> Welcome to <strong>Cryptocurrency Insider</strong>.</p>
+        <br /> <br />
+        <p> This site will explain the basics on cryptocurrencies, block-chain 
+                technology, link you to some popular exchanges, and touch on a 
+                few Cryptos. </p>
+        <p>  </p>
+        <br /> <br />
+        <p><em>Quote: "The governments of the world have spent hundreds and 
+                    hundreds of trillions of dollars bailing out a decaying, 
+                    dickensian, outmoded system called banking, when the 
+                    solution to the future of finance is peer-to-peer. It’s 
+                    going to be alternative currencies like Bitcoin and it’s not
+                    actually going to be a banking system as we had before 2008."</em></p>
+                    <br /> <br />
+        <p><em><strong>- Patrick Young</strong></em></p>
+      </div>
+      
+       <figure>
+        
+            <img id ="cryptoPicture" src="img/crypto.jpg"  alt ="Picture of cryptocurrencies" width="500" height="600"  />
+        </figure>
+       
+    </main>
+        
+        <!-- This is the footer -->
+        <!-- The footer goes inside the body but not always -->
+        
+        
+        <footer>
+          <hr> CST 336 Internet Programming. 2018 &copy; Logan Louks<br />
+                <strong> Disclaimer: <strong>
+                  All information on this website was researched by Logan Louks 
+                      from other websites, and is used for Academic purposes.
+                  <a href="http://csumb.edu">California State University, Monterey Bay</a>
+                   <p><img id ="csumbLogo" src="img/csumblogo.png"  alt ="Picture of CSU Monterey logo (Otter)" /></p>
+              
+        </footer>
+      
+        <!-- closing footer -->
+        
+    </body>
+    <!-- closing body -->
+
+</html>
