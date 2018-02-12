@@ -1,0 +1,81 @@
+
+<?php
+
+    function getRandomCard() {
+    
+    $imagesClubsDir = 'images/cards/clubs';
+
+        $images = glob($imagesDir . 'ace.png' , 'jack.png' , 'king.png', 'queen.png' , 'ten.png', GLOB_BRACE);
+
+        $randomImage = $images[array_rand($images)]; // See comments
+        
+        $imagesdiamondsDir = 'images/cards/diamonds';
+
+        $images = glob($imagesDir . 'ace.png' , 'jack.png' , 'king.png', 'queen.png' , 'ten.png', GLOB_BRACE);
+
+        $randomImage = $images[array_rand($images)]; // See comments
+        
+        $imagesHeartsDir = 'images/cards/hearts';
+
+        $images = glob($imagesDir . 'ace.png' , 'jack.png' , 'king.png', 'queen.png' , 'ten.png', GLOB_BRACE);
+
+        $randomImage = $images[array_rand($images)]; // See comments
+        
+        $imagesClubsDir = 'images/cards/spades';
+
+        $images = glob($imagesDir . 'ace.png' , 'jack.png' , 'king.png', 'queen.png' , 'ten.png', GLOB_BRACE);
+
+        $randomImage = $images[array_rand($images)]; // See comments
+    
+    echo 
+
+    }
+    
+    $humanScore = 0;
+    $computerScore = 0;
+
+?>
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Random Card Game </title>
+        
+        <style>
+        
+         body{
+             
+         }
+         h1{
+             text-align: center;
+         }
+         #cpuCard, #humanCard, #human, #computer{
+             padding-left:350px;
+             display: inline-block;
+             text-align:center;
+         }
+        </style>
+        
+    </head>
+    <body>
+        <h1> Random Card Game</h1>
+        <br></br>
+                <br></br>
+
+        <div id="human">
+            <h2>Human</h2>
+            <img id ="humanCard" src="cards/spades/ace.png"  alt ="Picture of card" width="200" height="200" />
+        </div>
+        <div id="computer">
+            <h2>Computer</h2>
+            <img id ="cpuCard" src="cards/hearts/ace.png"  alt ="Picture of card" width="200" height="200" />
+        </div>
+        
+        <figure>
+            <img src""
+        </figure>
+        
+        
+
+    </body>
+</html>
