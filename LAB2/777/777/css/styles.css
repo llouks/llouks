@@ -10,6 +10,9 @@
         color: white;
         
     }
+    h2{
+        text-align: center;
+    }
     
     #main {
         font-family: 'Baloo Bhaina', cursive;
@@ -64,4 +67,8 @@
         width:600px;
         margin:0 auto;
         padding-top:10px;
+        text-align: center;
+    }
+    #csumblogo {
+        border-radius: 40px;
     }

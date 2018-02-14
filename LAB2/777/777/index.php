@@ -2,11 +2,7 @@
 <html>
     <style>
         @import url("css/styles.css");
-        footer #csumblogo {
-            font-family: "Brush Script MT", cursive; 
-            text-align: center;
-            border-radius: 40px;
-        }
+       
         
     </style>
     
@@ -49,7 +45,6 @@
             
            
            function displaySymbol($randomValue , $pos) {
-               echo $randomValue;
               switch ($randomValue) {
                     
                     case 0: $symbol = "seven";
