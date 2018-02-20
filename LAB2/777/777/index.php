@@ -12,7 +12,7 @@
     </head>
     
     <div id = "main">
-    <h2>               WELCOME TO THE CSUMB SLOT MACHINE</h2>
+    <h2>MATCH THE COLLEGES</h2>
     
 
     <body>
