@@ -64,30 +64,30 @@
     <body>
         
         <?php
-        function displayPoints($randomValue1 , $randomValue2, $randomValue3){
+        function displayDecision($randomValue1 , $randomValue2, $randomValue3){
                 echo "<div id = 'output'> ";
                 if($randomValue1 == $randomValue2 && $randomValue2 == $randomValue3) {
                     switch ($randomValue1){
-                    case 0: $totalPoints = Duke;
+                    case 0: $collegeChoice = Duke;
                         echo "<h1>You Signed with Duke!</h1>";
                         break;
-                    case 1: $totalPoints = UNC;
+                    case 1: $collegeChoice = UNC;
                      echo "<h1>You Signed with North Carolina!</h1>";
                         break;
-                    case 2: $totalPoints = MSU;
+                    case 2: $collegeChoice = MSU;
                          echo "<h1>You Signed with Michigan State!</h1>";
                         break;
-                    case 3: $totalPoints = TCU;
+                    case 3: $collegeChoice = TCU;
                      echo "<h1>You Signed with Texas Christian!</h1>";
                         break;
-                    case 4: $totalPoints = Oregon;
+                    case 4: $collegeChoice = Oregon;
                      echo "<h1>You Signed with Oregon!</h1>";
                         break;
-                    case 5: $totalPoints = Virginia;
+                    case 5: $collegeChoice = Virginia;
                      echo "<h1>You Signed with Virginia!</h1>";
                         break;
                     }
-                     echo "<h2> You Will Attend $totalPoints to pursue you're College Basketball Career !</h2>";
+                     echo "<h2> You Will Attend $collegeChoice to pursue you're College Basketball Career !</h2>";
                      }else{
                          echo "<h3> Keep Looking for a School!</h3>";
                     }
@@ -95,7 +95,7 @@
                 }
             
            
-           function displaySymbol($randomValue , $pos) {
+           function displayCollege($randomValue , $pos) {
               switch ($randomValue) {
                     
                     case 0: $symbol = "duke";
@@ -120,17 +120,17 @@
         
             for($i=1; $i<4; $i++){
                 ${"randomValue" . $i } = rand(0,5);
-                displaySymbol(${"randomValue" . $i} , $i);
+                displayCollege(${"randomValue" . $i} , $i);
             }
-            displayPoints($randomValue1, $randomValue2, $randomValue3);
+            displayDecision($randomValue1, $randomValue2, $randomValue3);
             
             
             function play() {
                 for ($i=1; $i<4; $i++) {
                     ${"randomValue" . $i } = rand(0,5);
-                    displaySymbol(${"randomValue" . $i});
+                    displayCollege(${"randomValue" . $i});
                 }
-                displayPoints($randomValue1 , $randomValue2 , $randomValue3);
+                displayDecision($randomValue1 , $randomValue2 , $randomValue3);
             }
         ?>
 
