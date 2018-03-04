@@ -82,7 +82,7 @@
             
             <input type="text" size="20" name="keyword" placeholder="Keyword to search for" value="<?=$_GET['keyword']?>"/>
             
-            <input type="radio" name="layout" value="<strong>horizontal</strong>" id="hlayout" 
+            <input type="radio" name="layout" value="horizontal" id="hlayout" 
             
             <?php
                if ($_GET['layout'] == "horizontal") {
@@ -93,7 +93,7 @@
             >
             <label for="hlayout"> Horizontal </label>
             
-            <input type="radio" name="layout" value="<strong>vertical</strong>" id="vlayout" <?= ($_GET['layout']=="vertical")?"checked":"" ?>>
+            <input type="radio" name="layout" value="vertical" id="vlayout" <?= ($_GET['layout']=="vertical")?"checked":"" ?>>
             <label for="vlayout"> Vertical </label>
             
             <select name="category">
