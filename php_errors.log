@@ -645,3 +645,8 @@
 [19-Feb-2018 23:46:28 UTC] PHP   1. {main}() /home/ubuntu/workspace/llouks/Challenge/password.php:0
 [19-Feb-2018 23:46:28 UTC] PHP   2. generatePassword() /home/ubuntu/workspace/llouks/Challenge/password.php:59
 [19-Feb-2018 23:46:28 UTC] PHP   3. array_push() /home/ubuntu/workspace/llouks/Challenge/password.php:28
+[26-Feb-2018 23:28:21 UTC] PHP Parse error:  syntax error, unexpected '_GET' (T_STRING) in /home/ubuntu/workspace/llouks/LAB4/index.php on line 34
+[26-Feb-2018 23:28:29 UTC] PHP Parse error:  syntax error, unexpected '_GET' (T_STRING) in /home/ubuntu/workspace/llouks/LAB4/index.php on line 34
+[04-Mar-2018 01:41:26 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/ubuntu/workspace/llouks/LAB4/index.php on line 167
+[04-Mar-2018 01:41:35 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/ubuntu/workspace/llouks/LAB4/index.php on line 167
+[04-Mar-2018 01:46:07 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/ubuntu/workspace/llouks/LAB4/index.php on line 167

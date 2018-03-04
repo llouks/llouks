@@ -3,7 +3,6 @@
         width:100%;
         text-align:center;
         color:yellow;
-        background-image: url("img/sea.jpg");
     }
     
     input {
@@ -14,4 +13,8 @@
     #carousel-example-generic {
          margin: 0 auto;   
          width: 700px;
+         padding-top: 400px; 
+    }
+    footer, #csumbLogo {
+        text-align: center;
     }

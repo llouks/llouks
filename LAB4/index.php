@@ -2,95 +2,149 @@
 
  //print_r($_GET); //displaying all content submitted in the form using the GET method
 
- $backgroundImage = "img/sea.jpg";
-
+  $backgroundImage = "img/space.jpg";
+    
   if (isset($_GET['keyword'])) { //if form was submitted
       
       include 'api/pixabayAPI.php';
       
-      echo "<h3>You Searched For: " . $_GET['keyword'] . "</h3>"; //Debugging purposes to check keyword
+      echo "<h3><strong>You searched for</strong> " . $_GET['keyword'] . "</h3>";
       
-      $imageURLs = getImageURLs($_GET['keyword']);
+      $orientation = "horizontal";
+      $keyword = $_GET['keyword'];
       
-      $backgroundImage = $imageURLs[rand(0, count($imageURLs))-1];
+      if (isset($_GET['layout'])) {  //user checked a layout
+        
+        $orientation = $_GET['layout'];
+        
+      }
       
-     // print_r($imageURLs); Debuggin purposes to check URLs and Images
+      if (!empty($_GET['category'])) { //user selected a category
+        $keyword = $_GET['category'];
+      }
+      
+      $imageURLs = getImageURLs($keyword, $orientation);
+      
+      //$backgroundImage = $imageURLs[rand(0, count($imageURLs)-1];
+      $backgroundImage = $imageURLs[array_rand($imageURLs)];
+      
+      //print_r($imageURLs);
       
       
   }      
  
+ function checkCategory($category){
+   
+    if ($category == $_GET['category']) {
+       echo " selected";
+    }
+ }
 
 ?>
-
-
-
 
 <!DOCTYPE html>
 <html>
     <head>
         <title> Lab 4: Pixabay Carousel </title>
     </head>
-    
     <style>
-    
         @import url("https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css");
         @import url("css/styles.css");
-    
         body {
             background-image: url(<?=$backgroundImage?>);
         }
         
         #carouselExampleIndicators {
             width: 500px;
-            margin: 0 auto;
-            padding-top: 300px;
+            margin: 0 auto; /*centers a div container*/
         }
+        
+        footer {
+        text-align: center;
+        padding-top: 500px;
+    }
          
     </style>
-    
     <body>
-        
+
         <?php
+        
             if (!isset($_GET['keyword'])) {
-                echo  "<h2> You must type a Keyword or Select a Category</h2>";   
-            }
-        ?>
         
-        
-        <form method= "GET">
+              echo "<h2><strong> You must type a keyword or select a category</strong> </h2>";
             
-            <input type="text" size="20" name="keyword" placeholder= "Enter Keyword Here..."/>
+            }  
+        ?>
+
+        
+
+        <form method="GET">
+            
+            <input type="text" size="20" name="keyword" placeholder="Keyword to search for" value="<?=$_GET['keyword']?>"/>
+            
+            <input type="radio" name="layout" value="<strong>horizontal</strong>" id="hlayout" 
+            
+            <?php
+               if ($_GET['layout'] == "horizontal") {
+                 echo "checked";
+               }
+            ?>
+            
+            >
+            <label for="hlayout"> Horizontal </label>
+            
+            <input type="radio" name="layout" value="<strong>vertical</strong>" id="vlayout" <?= ($_GET['layout']=="vertical")?"checked":"" ?>>
+            <label for="vlayout"> Vertical </label>
+            
+            <select name="category">
+              <option value="" >  Select One </option> 
+              <option value="sea" <?=checkCategory('sea')?>>  Ocean </option>
+              <option <?=checkCategory('Forest')?>>  Forest </option>
+              <option <?=checkCategory('Sky')?>>  Sky </option>
+            </select>
+            
             
             <input type="submit" value="Submit!"/>
-            
+                    
         </form>
-       
-      <?php
+        
+        <?php
           
            if (isset($_GET['keyword'])) {
         ?>
-        
         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
               <ol class="carousel-indicators">
                 <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
                 <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
                 <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="6"></li>
               </ol>
-              
               <div class="carousel-inner">
                 <div class="carousel-item active">
                   <img class="d-block w-100" src="<?=$imageURLs[0]?>" alt="First slide">
                 </div>
-                
                 <div class="carousel-item">
                   <img class="d-block w-100" src="<?=$imageURLs[1]?>" alt="Second slide">
                 </div>
-                
                 <div class="carousel-item">
                   <img class="d-block w-100" src="<?=$imageURLs[2]?>" alt="Third slide">
                 </div>
+                 <div class="carousel-item">
+                  <img class="d-block w-100" src="<?=$imageURLs[3]?>" alt="Fourth slide">
+                </div>
+                <div class="carousel-item">
+                  <img class="d-block w-100" src="<?=$imageURLs[4]?>" alt="Fifth slide">
+                </div>
+                 <div class="carousel-item">
+                  <img class="d-block w-100" src="<?=$imageURLs[5]?>" alt="Sixth slide">
+                </div>
+                 <div class="carousel-item">
+                  <img class="d-block w-100" src="<?=$imageURLs[6]?>" alt="Seventh slide">
+                </div>
               </div>
-              
               <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="sr-only">Previous</span>
@@ -99,15 +153,25 @@
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="sr-only">Next</span>
               </a>
-              
         </div>
         
         <?php
             }//endIf
+
         ?>
+        
         
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" /></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     </body>
+    
+    <footer>
+        <hr> CST 336 Internet Programming. 2018 &copy; Logan Louks<br />
+                <strong> Disclaimer: <strong>
+                  All information in this website belongs to Logan Louks and is used for Academic and Business purposes. 
+                  <a href="http://csumb.edu">California State University, Monterey Bay</a>
+                   <p><img id ="csumbLogo" src="img/csumblogo.png"  alt ="Picture of CSU Monterey logo (Otter)" /></p>
+    </footer>
+    
 </html>
