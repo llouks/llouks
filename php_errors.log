@@ -650,3 +650,117 @@
 [04-Mar-2018 01:41:26 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/ubuntu/workspace/llouks/LAB4/index.php on line 167
 [04-Mar-2018 01:41:35 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/ubuntu/workspace/llouks/LAB4/index.php on line 167
 [04-Mar-2018 01:46:07 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/ubuntu/workspace/llouks/LAB4/index.php on line 167
+[12-Mar-2018 21:33:41 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1045] Access denied for user 'rot'@'localhost' (using password: NO)' in /home/ubuntu/workspace/llouks/phpMyAdmin-4.7.8-all-languages/reports.php:35
+Stack trace:
+#0 /home/ubuntu/workspace/llouks/phpMyAdmin-4.7.8-all-languages/reports.php(35): PDO->__construct('mysql:host=loca...', 'rot', '')
+#1 {main}
+  thrown in /home/ubuntu/workspace/llouks/phpMyAdmin-4.7.8-all-languages/reports.php on line 35
+[12-Mar-2018 21:36:00 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1045] Access denied for user 'rot'@'localhost' (using password: NO)' in /home/ubuntu/workspace/llouks/phpMyAdmin-4.7.8-all-languages/reports.php:35
+Stack trace:
+#0 /home/ubuntu/workspace/llouks/phpMyAdmin-4.7.8-all-languages/reports.php(35): PDO->__construct('mysql:host=loca...', 'rot', '')
+#1 {main}
+  thrown in /home/ubuntu/workspace/llouks/phpMyAdmin-4.7.8-all-languages/reports.php on line 35
+[12-Mar-2018 21:37:52 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1045] Access denied for user 'rot'@'localhost' (using password: NO)' in /home/ubuntu/workspace/llouks/phpMyAdmin-4.7.8-all-languages/reports.php:35
+Stack trace:
+#0 /home/ubuntu/workspace/llouks/phpMyAdmin-4.7.8-all-languages/reports.php(35): PDO->__construct('mysql:host=loca...', 'rot', '')
+#1 {main}
+  thrown in /home/ubuntu/workspace/llouks/phpMyAdmin-4.7.8-all-languages/reports.php on line 35
+[12-Mar-2018 21:39:35 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1045] Access denied for user 'rot'@'localhost' (using password: NO)' in /home/ubuntu/workspace/llouks/phpMyAdmin-4.7.8-all-languages/reports.php:35
+Stack trace:
+#0 /home/ubuntu/workspace/llouks/phpMyAdmin-4.7.8-all-languages/reports.php(35): PDO->__construct('mysql:host=loca...', 'rot', '')
+#1 {main}
+  thrown in /home/ubuntu/workspace/llouks/phpMyAdmin-4.7.8-all-languages/reports.php on line 35
+[12-Mar-2018 21:40:20 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1045] Access denied for user 'rot'@'localhost' (using password: NO)' in /home/ubuntu/workspace/llouks/phpMyAdmin-4.7.8-all-languages/reports.php:35
+Stack trace:
+#0 /home/ubuntu/workspace/llouks/phpMyAdmin-4.7.8-all-languages/reports.php(35): PDO->__construct('mysql:host=loca...', 'rot', '')
+#1 {main}
+  thrown in /home/ubuntu/workspace/llouks/phpMyAdmin-4.7.8-all-languages/reports.php on line 35
+[12-Mar-2018 21:42:45 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'ottermart.user' doesn't exist' in /home/ubuntu/workspace/llouks/phpMyAdmin-4.7.8-all-languages/reports.php:62
+Stack trace:
+#0 /home/ubuntu/workspace/llouks/phpMyAdmin-4.7.8-all-languages/reports.php(62): PDOStatement->execute()
+#1 {main}
+  thrown in /home/ubuntu/workspace/llouks/phpMyAdmin-4.7.8-all-languages/reports.php on line 62
+[12-Mar-2018 21:43:20 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'ottermart.user' doesn't exist' in /home/ubuntu/workspace/llouks/phpMyAdmin-4.7.8-all-languages/reports.php:62
+Stack trace:
+#0 /home/ubuntu/workspace/llouks/phpMyAdmin-4.7.8-all-languages/reports.php(62): PDOStatement->execute()
+#1 {main}
+  thrown in /home/ubuntu/workspace/llouks/phpMyAdmin-4.7.8-all-languages/reports.php on line 62
+[12-Mar-2018 21:43:22 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'ottermart.user' doesn't exist' in /home/ubuntu/workspace/llouks/phpMyAdmin-4.7.8-all-languages/reports.php:62
+Stack trace:
+#0 /home/ubuntu/workspace/llouks/phpMyAdmin-4.7.8-all-languages/reports.php(62): PDOStatement->execute()
+#1 {main}
+  thrown in /home/ubuntu/workspace/llouks/phpMyAdmin-4.7.8-all-languages/reports.php on line 62
+[12-Mar-2018 21:43:36 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'ottermart.user' doesn't exist' in /home/ubuntu/workspace/llouks/phpMyAdmin-4.7.8-all-languages/reports.php:62
+Stack trace:
+#0 /home/ubuntu/workspace/llouks/phpMyAdmin-4.7.8-all-languages/reports.php(62): PDOStatement->execute()
+#1 {main}
+  thrown in /home/ubuntu/workspace/llouks/phpMyAdmin-4.7.8-all-languages/reports.php on line 62
+[12-Mar-2018 21:44:53 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'ottermart.om_user' doesn't exist' in /home/ubuntu/workspace/llouks/phpMyAdmin-4.7.8-all-languages/reports.php:39
+Stack trace:
+#0 /home/ubuntu/workspace/llouks/phpMyAdmin-4.7.8-all-languages/reports.php(39): PDOStatement->execute()
+#1 {main}
+  thrown in /home/ubuntu/workspace/llouks/phpMyAdmin-4.7.8-all-languages/reports.php on line 39
+[12-Mar-2018 21:44:54 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'ottermart.om_user' doesn't exist' in /home/ubuntu/workspace/llouks/phpMyAdmin-4.7.8-all-languages/reports.php:39
+Stack trace:
+#0 /home/ubuntu/workspace/llouks/phpMyAdmin-4.7.8-all-languages/reports.php(39): PDOStatement->execute()
+#1 {main}
+  thrown in /home/ubuntu/workspace/llouks/phpMyAdmin-4.7.8-all-languages/reports.php on line 39
+[12-Mar-2018 21:45:09 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'ottermart.user' doesn't exist' in /home/ubuntu/workspace/llouks/phpMyAdmin-4.7.8-all-languages/reports.php:62
+Stack trace:
+#0 /home/ubuntu/workspace/llouks/phpMyAdmin-4.7.8-all-languages/reports.php(62): PDOStatement->execute()
+#1 {main}
+  thrown in /home/ubuntu/workspace/llouks/phpMyAdmin-4.7.8-all-languages/reports.php on line 62
+[12-Mar-2018 22:08:33 UTC] PHP Fatal error:  Call to undefined function getDatabaseConnection() in /home/ubuntu/workspace/llouks/lab6/index.php on line 5
+[12-Mar-2018 22:08:33 UTC] PHP Stack trace:
+[12-Mar-2018 22:08:33 UTC] PHP   1. {main}() /home/ubuntu/workspace/llouks/lab6/index.php:0
+[12-Mar-2018 22:09:05 UTC] PHP Warning:  include(dbConnection.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/llouks/lab6/index.php on line 3
+[12-Mar-2018 22:09:05 UTC] PHP Stack trace:
+[12-Mar-2018 22:09:05 UTC] PHP   1. {main}() /home/ubuntu/workspace/llouks/lab6/index.php:0
+[12-Mar-2018 22:09:05 UTC] PHP Warning:  include(): Failed opening 'dbConnection.php' for inclusion (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/llouks/lab6/index.php on line 3
+[12-Mar-2018 22:09:05 UTC] PHP Stack trace:
+[12-Mar-2018 22:09:05 UTC] PHP   1. {main}() /home/ubuntu/workspace/llouks/lab6/index.php:0
+[12-Mar-2018 22:09:05 UTC] PHP Fatal error:  Call to undefined function getDatabaseConnection() in /home/ubuntu/workspace/llouks/lab6/index.php on line 5
+[12-Mar-2018 22:09:05 UTC] PHP Stack trace:
+[12-Mar-2018 22:09:05 UTC] PHP   1. {main}() /home/ubuntu/workspace/llouks/lab6/index.php:0
+[12-Mar-2018 22:09:18 UTC] PHP Warning:  include(../../dbConnection.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/llouks/lab6/index.php on line 3
+[12-Mar-2018 22:09:18 UTC] PHP Stack trace:
+[12-Mar-2018 22:09:18 UTC] PHP   1. {main}() /home/ubuntu/workspace/llouks/lab6/index.php:0
+[12-Mar-2018 22:09:18 UTC] PHP Warning:  include(): Failed opening '../../dbConnection.php' for inclusion (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/llouks/lab6/index.php on line 3
+[12-Mar-2018 22:09:18 UTC] PHP Stack trace:
+[12-Mar-2018 22:09:18 UTC] PHP   1. {main}() /home/ubuntu/workspace/llouks/lab6/index.php:0
+[12-Mar-2018 22:09:18 UTC] PHP Fatal error:  Call to undefined function getDatabaseConnection() in /home/ubuntu/workspace/llouks/lab6/index.php on line 5
+[12-Mar-2018 22:09:18 UTC] PHP Stack trace:
+[12-Mar-2018 22:09:18 UTC] PHP   1. {main}() /home/ubuntu/workspace/llouks/lab6/index.php:0
+[12-Mar-2018 22:09:30 UTC] PHP Fatal error:  Call to undefined function getDatabaseConnection() in /home/ubuntu/workspace/llouks/lab6/index.php on line 5
+[12-Mar-2018 22:09:30 UTC] PHP Stack trace:
+[12-Mar-2018 22:09:30 UTC] PHP   1. {main}() /home/ubuntu/workspace/llouks/lab6/index.php:0
+[12-Mar-2018 22:10:40 UTC] PHP Fatal error:  Call to undefined function getDatabaseConnection() in /home/ubuntu/workspace/llouks/lab6/index.php on line 6
+[12-Mar-2018 22:10:40 UTC] PHP Stack trace:
+[12-Mar-2018 22:10:40 UTC] PHP   1. {main}() /home/ubuntu/workspace/llouks/lab6/index.php:0
+[12-Mar-2018 22:10:42 UTC] PHP Fatal error:  Call to undefined function getDatabaseConnection() in /home/ubuntu/workspace/llouks/lab6/index.php on line 6
+[12-Mar-2018 22:10:42 UTC] PHP Stack trace:
+[12-Mar-2018 22:10:42 UTC] PHP   1. {main}() /home/ubuntu/workspace/llouks/lab6/index.php:0
+[12-Mar-2018 22:10:43 UTC] PHP Fatal error:  Call to undefined function getDatabaseConnection() in /home/ubuntu/workspace/llouks/lab6/index.php on line 6
+[12-Mar-2018 22:10:43 UTC] PHP Stack trace:
+[12-Mar-2018 22:10:43 UTC] PHP   1. {main}() /home/ubuntu/workspace/llouks/lab6/index.php:0
+[12-Mar-2018 22:11:28 UTC] PHP Fatal error:  Call to undefined function getDatabaseConnection() in /home/ubuntu/workspace/llouks/lab6/index.php on line 6
+[12-Mar-2018 22:11:28 UTC] PHP Stack trace:
+[12-Mar-2018 22:11:28 UTC] PHP   1. {main}() /home/ubuntu/workspace/llouks/lab6/index.php:0
+[12-Mar-2018 22:11:29 UTC] PHP Fatal error:  Call to undefined function getDatabaseConnection() in /home/ubuntu/workspace/llouks/lab6/index.php on line 6
+[12-Mar-2018 22:11:29 UTC] PHP Stack trace:
+[12-Mar-2018 22:11:29 UTC] PHP   1. {main}() /home/ubuntu/workspace/llouks/lab6/index.php:0
+[12-Mar-2018 22:11:31 UTC] PHP Fatal error:  Call to undefined function getDatabaseConnection() in /home/ubuntu/workspace/llouks/lab6/index.php on line 6
+[12-Mar-2018 22:11:31 UTC] PHP Stack trace:
+[12-Mar-2018 22:11:31 UTC] PHP   1. {main}() /home/ubuntu/workspace/llouks/lab6/index.php:0
+[12-Mar-2018 22:11:59 UTC] PHP Fatal error:  Call to undefined function getDatabaseConnection() in /home/ubuntu/workspace/llouks/lab6/index.php on line 6
+[12-Mar-2018 22:11:59 UTC] PHP Stack trace:
+[12-Mar-2018 22:11:59 UTC] PHP   1. {main}() /home/ubuntu/workspace/llouks/lab6/index.php:0
+[12-Mar-2018 22:12:00 UTC] PHP Fatal error:  Call to undefined function getDatabaseConnection() in /home/ubuntu/workspace/llouks/lab6/index.php on line 6
+[12-Mar-2018 22:12:00 UTC] PHP Stack trace:
+[12-Mar-2018 22:12:00 UTC] PHP   1. {main}() /home/ubuntu/workspace/llouks/lab6/index.php:0
+[12-Mar-2018 22:42:56 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'catId = '5'' at line 1' in /home/ubuntu/workspace/llouks/lab6/index.php:60
+Stack trace:
+#0 /home/ubuntu/workspace/llouks/lab6/index.php(60): PDOStatement->execute(Array)
+#1 /home/ubuntu/workspace/llouks/lab6/index.php(112): displaySearchResults()
+#2 {main}
+  thrown in /home/ubuntu/workspace/llouks/lab6/index.php on line 60
