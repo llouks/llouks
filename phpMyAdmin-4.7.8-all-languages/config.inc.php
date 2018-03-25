@@ -32,6 +32,21 @@ $cfg['Servers'][$i]['host'] = 'localhost';
 $cfg['Servers'][$i]['compress'] = false;
 $cfg['Servers'][$i]['AllowNoPassword'] = true;
 
+
+/**
+ * Second server (Heroku DB)
+ * mysql://bdec732e02f8b6:7f93bc30@us-cdbr-iron-east-05.cleardb.net/heroku_2f095bcc199d635?reconnect=true
+ */
+$i++;
+/* Authentication type */
+$cfg['Servers'][$i]['auth_type'] = 'config';
+/* Server parameters */
+$cfg['Servers'][$i]['host'] = 'us-cdbr-iron-east-05.cleardb.net';
+$cfg['Servers'][$i]['user'] = "bdec732e02f8b6";
+$cfg['Servers'][$i]['password'] = "7f93bc30"; 
+$cfg['Servers'][$i]['compress'] = false;
+$cfg['Servers'][$i]['AllowNoPassword'] = false;
+
 /**
  * phpMyAdmin configuration storage settings.
  */

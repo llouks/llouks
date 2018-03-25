@@ -106,7 +106,7 @@
             <br/>
         </fieldset>
         
-     
+     <!–– -->
          <fieldset>
             <legend>Question #5</legend>
             <p>Who Was the NBA's First Lottery Pick?</p>
@@ -124,42 +124,7 @@
     <br/>
     <br/>
     
-    
-    
-   
-    <?php
-        if(isset($_GET['submit'])) {
-            if(!empty($_GET['answerQ1'])) {
-                if(!empty($_GET['choices'])) {
-                    if(!empty($_GET['answerQ3'])) {
-                        if(!empty($_GET['answer'])) { 
-                            if(!empty($_GET['choices2'])) {
-                                $answerQTwo = $_GET['choices'];
-                                $answerQFour = $_GET['answer'];
-                                $answerQFive = $_GET['choices2'];
-                                echo "<h2> Final Score: " . answerChecker ($answerQOne , $answerQTwo, $answerQThree, $answerQFour, $answerQFive) . " /5 </h2>";
-                            }else {
-                                echo "<h3> Question #5 is Not Answered </h3>";
-                            }
-                        }
-                            else {
-                                echo "<h3> Question #4 is Not Answered </h3>";
-                            }
-                    }
-                            else {
-                                echo "<h3> Question #3 is Not Answered </h3>";
-                            }
-                }
-                            else {
-                                echo "<h3> Question #2 is Not Answered </h3>";
-                            }
-            }
-                            else {
-                                echo "<h3> Question #1 is Not Answered </h3>";
-                            }
-        }
-    
-    ?>
+
     
     
     </body>
