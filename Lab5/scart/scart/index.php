@@ -1,5 +1,5 @@
 <?php
-   include 'functions.php';
+    include 'functions.php';
    
     session_start(); 
     
@@ -10,7 +10,7 @@
       if(isset($_GET['query'])) {
         //get access to our apu function
         include 'wmapi.php';
-        $items = getProducts($_GET['query']);
+        $items = getProducts($_GET['query']); 
     }
     
     
@@ -88,7 +88,7 @@
             
             <!-- Display Search Results -->
         
-        <?php displayResults(); ?>
+            <?php displayResults(); ?>
             
         </div>
       
