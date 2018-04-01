@@ -107,7 +107,7 @@
         }
         form {
             text-align:center;
-             border: 4px solid black;
+             
         }
         h1 {
             color: red;
