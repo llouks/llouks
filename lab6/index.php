@@ -1,7 +1,7 @@
 
 <?php
 
-    include '../dbConnection.php';
+    include 'dbConnection.php';
     
     $conn = getDatabaseConnection("ottermart");
 
@@ -107,7 +107,7 @@
         }
         form {
             text-align:center;
-             
+             border: 4px solid black;
         }
         h1 {
             color: red;
