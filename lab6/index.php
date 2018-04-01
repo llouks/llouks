@@ -101,6 +101,21 @@
     <head>
         <title> OtterMart Product Search </title>
     </head>
+    <style type="text/css">
+        body {
+            text-align:center;
+        }
+        form {
+            text-align:center;
+             border: 4px solid black;
+        }
+        h1 {
+            color: red;
+        }
+        #foot {
+            color: red;
+        }
+    </style>
     <body>
 
         <h1>  OtterMart Product Search </h1>
@@ -137,4 +152,12 @@
         <?= displaySearchResults() ?>
         
     </body>
+    <footer id= "foot">
+        <hr> CST 336 Internet Programming. 2018 &copy; Logan Louks<br />
+                <strong> Disclaimer: <strong>
+                  All information on this website was researched by Logan Louks 
+                      from other websites, and is used for Academic purposes.
+                  <a href="http://csumb.edu">California State University, Monterey Bay</a>
+                   <p><img id ="csumbLogo" src="img/csumbLogo.jpg"  alt ="Picture of CSU Monterey logo (Otter)" width="200" height="100" /></p>
+    </footer>
 </html>

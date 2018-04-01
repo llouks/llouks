@@ -46,6 +46,12 @@
 <html>
     <head>
         <title> </title>
+        <style type="text/css">
+            body {
+                text-align:center;
+                font-size:1.2em;
+            }
+        </style>
     </head>
     <body>
 
