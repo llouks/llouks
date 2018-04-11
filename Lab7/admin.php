@@ -1,21 +1,25 @@
 <?php
 
 session_start();
+include 'dbConnection.php';
+$conn = getDatabaseConnection("ottermart");
 
-//Grabs from the database to display all products
-function displayAllProducts(){
-     global $conn;
-     
-     $sql = "SELECT productName, productDescription, price FROM 'om_product' ORDER BY productName";
-     
-     $stmt = $conn ->prepare($sql);
-     $stmt->execute();
-     $record = $stmt->fetch(PDO::FETCH_ASSOC);
-    
+if(!isset( $_SESSION['adminName']))
+{
+  header("Location:index.php");
 }
 
+function displayAllProducts(){
+    global $conn;
+    $sql="SELECT * FROM om_product";
+    $statement = $conn->prepare($sql);
+    $statement->execute();
+    $records = $statement->fetchAll(PDO::FETCH_ASSOC);
+    
+    //print_r($records);
 
-
+    return $records;
+}
 ?>
 
 <!DOCTYPE html>
@@ -33,11 +37,19 @@ function displayAllProducts(){
         
         <br />
         
+        <form action="addProduct.php">
+            <input type="submit" name="addproduct" value="Add Product"/>
+        </form>
+        
         <strong> Products: </strong> <br />
         
-        <?=displayAllProducts()?>
+        <?php $records=displayAllProducts();
+            foreach($records as $record) {
+                echo "<a href='updateProduct.php?productId=".$record['productId']. "'>Update Product</a>";
+                echo $record['productName'];
+                echo '<br>';
+            }
         
-        
-
+        ?>
     </body>
 </html>

@@ -901,3 +901,50 @@ Stack trace:
 #1 /home/ubuntu/workspace/llouks/midterm/program2.php(32): getInfoA()
 #2 {main}
   thrown in /home/ubuntu/workspace/llouks/midterm/program2.php on line 13
+[02-Apr-2018 21:39:07 UTC] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/ubuntu/workspace/llouks/Lab7/admin.php on line 11
+[02-Apr-2018 21:39:07 UTC] PHP Stack trace:
+[02-Apr-2018 21:39:07 UTC] PHP   1. {main}() /home/ubuntu/workspace/llouks/Lab7/admin.php:0
+[02-Apr-2018 21:39:07 UTC] PHP   2. displayAllProducts() /home/ubuntu/workspace/llouks/Lab7/admin.php:38
+[02-Apr-2018 21:51:19 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''om_product' ORDER BY productName' at line 1' in /home/ubuntu/workspace/llouks/Lab7/admin.php:13
+Stack trace:
+#0 /home/ubuntu/workspace/llouks/Lab7/admin.php(13): PDOStatement->execute()
+#1 /home/ubuntu/workspace/llouks/Lab7/admin.php(44): displayAllProducts()
+#2 {main}
+  thrown in /home/ubuntu/workspace/llouks/Lab7/admin.php on line 13
+[02-Apr-2018 21:55:57 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''om_product' ORDER BY productName' at line 1' in /home/ubuntu/workspace/llouks/Lab7/admin.php:14
+Stack trace:
+#0 /home/ubuntu/workspace/llouks/Lab7/admin.php(14): PDOStatement->execute()
+#1 /home/ubuntu/workspace/llouks/Lab7/admin.php(45): displayAllProducts()
+#2 {main}
+  thrown in /home/ubuntu/workspace/llouks/Lab7/admin.php on line 14
+[02-Apr-2018 22:20:09 UTC] PHP Parse error:  syntax error, unexpected ')', expecting '(' in /home/ubuntu/workspace/llouks/Lab7/addProduct.php on line 14
+[03-Apr-2018 00:05:00 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''celebrity' WHERE gender = 'F' AND country_of_birth != 'USA' ORDER BY lastName' at line 1' in /home/ubuntu/workspace/llouks/midterm/program2.php:13
+Stack trace:
+#0 /home/ubuntu/workspace/llouks/midterm/program2.php(13): PDOStatement->execute()
+#1 /home/ubuntu/workspace/llouks/midterm/program2.php(32): getInfoA()
+#2 {main}
+  thrown in /home/ubuntu/workspace/llouks/midterm/program2.php on line 13
+[04-Apr-2018 21:16:36 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/ubuntu/workspace/llouks/Lab7/addProduct.php on line 66
+[04-Apr-2018 21:17:49 UTC] PHP Warning:  include(../../dbConnection.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/llouks/Lab7/addProduct.php on line 7
+[04-Apr-2018 21:17:49 UTC] PHP Stack trace:
+[04-Apr-2018 21:17:49 UTC] PHP   1. {main}() /home/ubuntu/workspace/llouks/Lab7/addProduct.php:0
+[04-Apr-2018 21:17:49 UTC] PHP Warning:  include(): Failed opening '../../dbConnection.php' for inclusion (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/llouks/Lab7/addProduct.php on line 7
+[04-Apr-2018 21:17:49 UTC] PHP Stack trace:
+[04-Apr-2018 21:17:49 UTC] PHP   1. {main}() /home/ubuntu/workspace/llouks/Lab7/addProduct.php:0
+[04-Apr-2018 21:17:49 UTC] PHP Fatal error:  Call to undefined function getDatabaseConnection() in /home/ubuntu/workspace/llouks/Lab7/addProduct.php on line 8
+[04-Apr-2018 21:17:49 UTC] PHP Stack trace:
+[04-Apr-2018 21:17:49 UTC] PHP   1. {main}() /home/ubuntu/workspace/llouks/Lab7/addProduct.php:0
+[04-Apr-2018 21:17:50 UTC] PHP Warning:  include(../../dbConnection.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/llouks/Lab7/addProduct.php on line 7
+[04-Apr-2018 21:17:50 UTC] PHP Stack trace:
+[04-Apr-2018 21:17:50 UTC] PHP   1. {main}() /home/ubuntu/workspace/llouks/Lab7/addProduct.php:0
+[04-Apr-2018 21:17:50 UTC] PHP Warning:  include(): Failed opening '../../dbConnection.php' for inclusion (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/llouks/Lab7/addProduct.php on line 7
+[04-Apr-2018 21:17:50 UTC] PHP Stack trace:
+[04-Apr-2018 21:17:50 UTC] PHP   1. {main}() /home/ubuntu/workspace/llouks/Lab7/addProduct.php:0
+[04-Apr-2018 21:17:50 UTC] PHP Fatal error:  Call to undefined function getDatabaseConnection() in /home/ubuntu/workspace/llouks/Lab7/addProduct.php on line 8
+[04-Apr-2018 21:17:50 UTC] PHP Stack trace:
+[04-Apr-2018 21:17:50 UTC] PHP   1. {main}() /home/ubuntu/workspace/llouks/Lab7/addProduct.php:0
+[04-Apr-2018 21:51:28 UTC] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/ubuntu/workspace/llouks/Lab7/updateProduct.php on line 8
+[04-Apr-2018 21:51:28 UTC] PHP Stack trace:
+[04-Apr-2018 21:51:28 UTC] PHP   1. {main}() /home/ubuntu/workspace/llouks/Lab7/updateProduct.php:0
+[04-Apr-2018 21:51:28 UTC] PHP   2. getProductInfo() /home/ubuntu/workspace/llouks/Lab7/updateProduct.php:16
+[04-Apr-2018 22:30:34 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/ubuntu/workspace/llouks/Lab7/updateProduct.php on line 63

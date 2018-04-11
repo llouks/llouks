@@ -5,7 +5,7 @@
   function getInfoA(){
       global $conn;
       
-      $sql= "   SELECT firstName, lastName, country_of_birth FROM 'celebrity' WHERE gender = 'F' AND country_of_birth != 'USA' ORDER BY lastName";
+      $sql= "   SELECT firstName, lastName, country_of_birth FROM celebrity WHERE gender = 'F' AND country_of_birth != 'USA' ORDER BY lastName";
                 
     //Example: $sql = "SELECT productName, productDescription, price FROM 'om_product' ORDER BY productName";
                 
