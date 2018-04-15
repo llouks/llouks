@@ -1,0 +1,15 @@
+[11-Apr-2018 22:50:09 UTC] PHP Warning:  include(config/dbConn.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/llouks/Challenge/guess/index.php on line 22
+[11-Apr-2018 22:50:09 UTC] PHP Stack trace:
+[11-Apr-2018 22:50:09 UTC] PHP   1. {main}() /home/ubuntu/workspace/llouks/Challenge/guess/index.php:0
+[11-Apr-2018 22:50:09 UTC] PHP Warning:  include(): Failed opening 'config/dbConn.php' for inclusion (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/llouks/Challenge/guess/index.php on line 22
+[11-Apr-2018 22:50:09 UTC] PHP Stack trace:
+[11-Apr-2018 22:50:09 UTC] PHP   1. {main}() /home/ubuntu/workspace/llouks/Challenge/guess/index.php:0
+[11-Apr-2018 22:50:09 UTC] PHP Fatal error:  Call to undefined function getDatabaseConnection() in /home/ubuntu/workspace/llouks/Challenge/guess/index.php on line 23
+[11-Apr-2018 22:50:09 UTC] PHP Stack trace:
+[11-Apr-2018 22:50:09 UTC] PHP   1. {main}() /home/ubuntu/workspace/llouks/Challenge/guess/index.php:0
+[11-Apr-2018 22:50:31 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1049] Unknown database 'guessnumber'' in /home/ubuntu/workspace/llouks/Challenge/guess/config/dbConn.php:20
+Stack trace:
+#0 /home/ubuntu/workspace/llouks/Challenge/guess/config/dbConn.php(20): PDO->__construct('mysql:host=loca...', 'root', '')
+#1 /home/ubuntu/workspace/llouks/Challenge/guess/index.php(23): getDatabaseConnection('guessnumber')
+#2 {main}
+  thrown in /home/ubuntu/workspace/llouks/Challenge/guess/config/dbConn.php on line 20

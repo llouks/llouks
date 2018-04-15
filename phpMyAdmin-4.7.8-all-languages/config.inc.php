@@ -45,7 +45,7 @@ $cfg['Servers'][$i]['host'] = 'us-cdbr-iron-east-05.cleardb.net';
 $cfg['Servers'][$i]['user'] = "bdec732e02f8b6";
 $cfg['Servers'][$i]['password'] = "7f93bc30"; 
 $cfg['Servers'][$i]['compress'] = false;
-$cfg['Servers'][$i]['AllowNoPassword'] = false;
+$cfg['Servers'][$i]['AllowNoPassword'] = true;
 
 /**
  * phpMyAdmin configuration storage settings.

@@ -39,7 +39,7 @@
     $record = $stmt->fetch(PDO::FETCH_ASSOC); //expecting one single record
     
     //print_r($record);
-
+    
     if (empty($record)) {
         
         echo "Wrong username or password!";
