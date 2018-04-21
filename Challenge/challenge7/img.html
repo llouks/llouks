@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Challenge #7 </title>
+        
+         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script>
+        
+        var x = Math.floor(Math.random() * 3);
+            //alert(x);
+            
+           
+        
+         $(document).ready( function(){
+                
+                
+                 $("#visibleBtn").click( function() { 
+                     
+                    document.getElementById("visibleImage").src="img/now_you_dont.png";
+                     document.getElementById("visibleImage").id= "invisibleImage";
+
+                    document.getElementById("visible").innerHTML = "Now you don't...";
+                    document.getElementById("visibleBtn").innerHTML = "Reappear";
+                    document.getElementById("visibleBtn").id= "invisibleBtn";
+                
+                     
+                     
+                 })
+                
+                $("#invisibleBtn").click( function() { 
+                     
+                    document.getElementById("invisibleImage").src="img/now_you_see_me.png";
+                    document.getElementById("invisibleImage").id= "visibleImage";
+                
+                    document.getElementById("visible").innerHTML = "Now you see me...";
+                    document.getElementById("invisibleBtn").innerHTML = "Do Magic!!";
+                    document.getElementById("invisibleBtn").id= "visibleBtn";
+                
+                     
+                     
+                 })
+                 
+                 
+
+         });
+         
+
+            
+            
+            
+            
+        </script>
+    </head>
+    <body>
+        <img id ="visibleImage" src="img/now_you_see_me.png" />
+        
+        <h3 id="visible">Now you see me...</h3>
+        
+        <button id="visibleBtn">Do magic!!</button>
+        
+        
+        <!--<img id ="invisibleImage" src="img/now_you_dont.png" />-->
+        
+        <!--<h3 id="invisible">Now you don't...</h3>-->
+        
+        <!--<button>Reappeear</button>-->
+
+    </body>
+</html>
