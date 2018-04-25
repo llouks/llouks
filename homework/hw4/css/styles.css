@@ -1,0 +1,52 @@
+h1 {
+    color: black;
+    font-family: "Impact, Charcoal, sans-serif";
+    font-size:2.8em;
+    font-stretch: semi-expanded;
+}
+
+h2 {
+    color: yellow;
+    font-family: "Impact, Charcoal, sans-serif";
+    font-size:2.8em;
+    font-stretch: semi-expanded;
+}
+
+body {
+    text-align: center;
+    color: black;
+    background:url('../img/nba.png');
+}
+
+
+form {
+    display: inline-block;
+    text-align: left;
+    background:url("../img/leather.jpg");
+   font-family: "Impact, Charcoal, sans-serif";
+    font-size: 1.8em;
+}
+
+legend {
+    border: 4px solid black;
+}
+
+#submit {
+    text-align: center;
+}
+
+footer {
+    color:black;
+    font-family: "Impact, Charcoal, sans-serif";
+    font-stretch: semi-expanded;
+    font-weight: bold;
+    font-size: 1em;
+}
+
+h2 {
+    color: black;
+    font-family: "Impact, Charcoal, sans-serif";
+    font-size: 2.4em;
+    font-stretch: semi-expanded;
+    font-weight: bold;
+}

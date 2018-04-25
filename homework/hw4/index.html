@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Homework #4: Basketball Quiz </title>
+        <meta charset= "utf-8"/>
+        <link href="css/styles.css" rel="stylesheet" type="text/css" />
+        <script src= "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </head>
+    
+    
+    <div id = "main">
+    <h1>Basketball Quiz</h1>
+    <h2>JQuery/ JavaScript Edition</h2>
+    <body>
+        <form>
+        <fieldset>
+            <legend>Question #1</legend>
+            <p>Who has won the most NBA Championships? (*Type Team Name*)</p>
+            <input type= "text" name="answerQ1" id="answerQ1" />
+            <div id="answer1" ></div>
+        </fieldset>
+        
+      
+        <fieldset>
+            <legend>Question #2</legend>
+            <p>Which NBA Player has scored 100 Points in a Game?</p>
+            <select name = "choices" id="choices">
+                <option value= "">Select an Answer:</option>
+                <option value="1">Kareem Abdual Jabbar</option>
+                <option value="2">Michael Jordan</option>
+                <option value="3">Kobe Bryant</option>
+                <option value="4">Wilt Chamberlain</option>
+            </select>
+            <div id="answer2"></div>
+        </fieldset>
+        
+       
+         <fieldset>
+            <legend>Question #3</legend>
+            <p>Who is considered the best NBA Player of All-Time? (*Type in First & Last Name*)</p>
+            <input type= "text" name="answerQ3" id= "answerQ3" />
+            <div id="answer3"></div>
+        </fieldset>
+        
+        
+        <fieldset>
+            <legend>Question #4</legend>
+            <p>Who was the First NBA Player to Record back-to-back 50 Point Games?</p>
+            <div class  = "label">
+                <input type ="radio" id= "choice1" name="answer" value="James Harden">
+                <label for="choice1">James Harden</label>
+                <br/>
+                 <input type ="radio" id= "choice2" name="answer" value="Lebron James">
+                <label for="choice2">Lebron James</label>
+                <br/>
+                 <input type ="radio" id= "choice3" name="answer" value="Antawn Jamison">
+                <label for="choice3">Antawn Jamison</label>
+                <br/>
+                 <input type ="radio" id= "choice4" name="answer" value="Russel Westbrook">
+                <label for="choice1">Russel Westbrook</label>
+                <br/>
+            </div>
+            <div id="answer4"></div>
+            <br/>
+        </fieldset>
+        
+        
+         <fieldset>
+            <legend>Question #5</legend>
+            <p>Who Was the NBA's First Lottery Pick?</p>
+            <select name = "choices2" id= "choices2">
+                <option value= "">Select an Answer:</option>
+                <option value="1">Kareem Abdual Jabbar</option>
+                <option value="2">Wilt Chamberlain</option>
+                <option value="3">Patrick Ewing</option>
+                <option value="4">Juluis "Dr. J" Erving</option>
+            </select>
+            <div id="answer5"></div>
+        </fieldset>
+        
+        <button class="submit" id="submit" type= "button" name="submit" onClick= "getAnswers()">Submit</button>
+        
+    </form>  
+    <br/>
+    <br/>
+    
+    <script src="javaFunctions.js"></script>
+    
+
+    
+    
+    </body>
+    
+    <footer>
+        
+         <hr> CST 336 Internet Programming. 2018 &copy; Logan Louks<br />
+                <strong> Disclaimer: <strong>
+                  All information in this website belongs to Logan Louks, and is used for Academic and Business purposes.
+                  <a href="http://csumb.edu">California State University, Monterey Bay</a>
+                   <p><img id ="csumbLogo" src="img/csumblogo.png"  alt ="Picture of CSU Monterey logo (Otter)" /></p>
+        
+    </footer>
+    </div>
+</html>
