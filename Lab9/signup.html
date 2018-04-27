@@ -4,7 +4,9 @@
         <meta charset="UTF-8">
         <title>AJAX: Sign Up Page</title>
 
-        <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+        <script src="http://code.jquery.com/jquery-3.1.0.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
         <script>
         
             function validateForm() {
@@ -21,6 +23,69 @@
             $(document).ready( function(){
                 
                 //EVENTS
+        
+                $("#password").change( function () {
+                    $.ajax({
+
+                                type: "GET",
+                                url: "checkPasswordAPI.php",
+                                dataType: "json",
+                               // data: { "password": $("#password").val() },
+                                success: function(data,status) {
+                                //alert(data);
+                                //if( $("#pass") == $("#password")){
+                                if($("#pass").val() == $("#password").val()){
+                                    return;
+                                }
+                                //else if ($("#pass") != $("#password")) {
+                                else if($("#pass").val() != $("#password").val()){
+                                    $("#dPassword").append("<h4 style= 'color:red; text-shadow:1px 1px black'>Passwords do not match, Retype Password</h4>");
+                                }
+                                
+                                },
+                                complete: function(data,status) { //optional, used for debugging purposes
+                                //alert(status);
+                                }
+                                
+                            });//ajax
+                })
+                
+                
+                
+                
+                
+                
+                
+                
+                $("#username").change( function(){ 
+                    //alert( $("#username").val() )
+                    
+                    $.ajax({
+
+                        type: "GET",
+                        url: "checkUsernameAPI.php",
+                        dataType: "json",
+                        data: { "username": $("#username").val() },
+                        success: function(data,status) {
+                             //alert(data);
+                             
+                             if (!data) {  //data == false
+                                 $("#dUsername").append("<h4 style= 'color:green; text-shadow:1px 1px black'>Username is Available</h4>");
+                                
+                             } else {
+                                 $("#dUsername").append("<h4 style= 'color:red; text-shadow:1px 1px black'>Username is ALREADY TAKEN</h4>"); 
+                             }
+                             
+                        
+                        },
+                        complete: function(data,status) { //optional, used for debugging purposes
+                        //alert(status);
+                    }
+
+});//ajax
+                    
+                });
+                
                 $("#state").change( function () {
                     //alert("hi")
                     //alert( $("#state").val());
@@ -34,11 +99,12 @@
                         success: function(data,status) {
                         //alert(data[0]['county']);
                         //alert(data[0].county);
+                        $("#county").html("<option>Select One</option>");
+                        for(var i=0; i<data.length; i++)
+                        {
+                           $("#county").append("<option>" + data[i].county + "</option>"); 
+                        }
                         
-                        $("#county").html("<option></option>");
-                        for(var i=0; i<data.length; i++){
-                            $("#county").append("<option>" + data[i].county + "</option>");
-                            }    
                         },
                         complete: function(data,status) { //optional, used for debugging purposes
                         //alert(status);
@@ -58,9 +124,24 @@
                         dataType: "json",
                         data: { "zip": $("#zipCode").val() },
                         success: function(data,status) {
+                            
+                            if(!data) {
+                               $("#zippy").append("<h4 style= 'color:red; text-shadow:1px 1px black'>Zip code not found</h4>");
+                           } else{
+                           
                         
                            //alert(data.city);
                            $("#city").html(data.city);
+                          
+                           $("#lat").html(data.lat);
+                           $("#lat").append(data.latitude);
+                         
+                           $("#long").html(data.long);
+                           $("#long").append(data.longitude);
+                          }
+                           
+                        
+                           
                         
                         },
                         complete: function(data,status) { //optional, used for debugging purposes
@@ -71,7 +152,6 @@
                     
                 } ); //#zipCode Event 
 
-
                 
             } ); //documentReady
             
@@ -79,6 +159,26 @@
         </script>
 
     </head>
+    <style>
+       h1 {
+           color:red;
+       }
+        body{
+            text-align:center;
+            background: blue;
+        }
+        
+        form {
+            text-align: center;
+            margin: 25px auto;
+            width: 600px;
+            height: 600px;
+            border: solid;
+            padding-top:50px;
+            background:white;
+        }
+        
+    </style>
 
     <body>
     
@@ -86,17 +186,17 @@
     
         <form onsubmit="return validateForm()">
             <fieldset>
-               <legend>Sign Up</legend>
+               <legend><strong>Sign Up Here:</strong></legend>
                 First Name:  <input type="text"><br> 
                 Last Name:   <input type="text"><br> 
                 Email:       <input type="text"><br> 
                 Phone Number:<input type="text"><br><br>
-                Zip Code:    <input type="text" id="zipCode"><br>
+                Zip Code:    <input type="text" id="zipCode"><br><span id=zippy></span>
                 City:        <span id="city"></span>
                 <br>
-                Latitude: 
+                Latitude: <span id="lat"></span>
                 <br>
-                Longitude:
+                Longitude:<span id="long"></span>
                 <br><br>
                 State:     
                 <select id="state">
@@ -107,15 +207,16 @@
                     <option value="va"> Virginia</option>
                 </select><br />
                 
-                Select a County: <select id="county" label= "Select One"></select><br>
+                Select a County: <select id="county"></select><br>
                 
-                Desired Username: <input type="text"><br>
+                Desired Username: <input id="username" type="text"><br> <span id="dUsername"></span>
                 
-                Password: <input type="password"><br>
+                Password: <input id="pass" type="password"><br>
                 
-                Type Password Again: <input type="password"><br>
+                Type Password Again: <input id= "password" type="password"><br><span id = "dPassword"></span>
                 
-                <input type="submit" value="Sign up!">
+                 <button class="submit" id="submit" type= "button" name="submit" onClick= "addDB()" >Submit</button>
+                 <div id="signup"></div>
             </fieldset>
         </form>
     
