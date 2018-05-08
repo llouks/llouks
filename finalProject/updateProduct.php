@@ -89,6 +89,7 @@
             </select> <br />
             Set Image Url: <input type = "text" name = "productImage" value = "<?=$product['productImage']?>"><br>
             <input type="submit" name="updateProduct" value="Update Product">
+         <input type="button" value="Back" onclick="location.href = 'admin.php'" />
             
         </form>
     </body>

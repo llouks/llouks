@@ -9,7 +9,7 @@
     
     include 'dbConnection.php';
     
-    $conn = getDatabaseConnection("ottermart");
+    $conn = getDatabaseConnection("teamproject");
     
     $username = $_POST['username'];
     $password = sha1($_POST['password']);
@@ -41,13 +41,12 @@
     //print_r($record);
     
     if (empty($record)) {
-        
-        echo "Wrong username or password!";
+       // print "success";
+       echo "Wrong username or password!";
         
     } else {
-        
-        
-            //echo $record['firstName'] . " " . $record['lastName'];
+    
+            echo $record['firstName'] . " " . $record['lastName'];
             $_SESSION['adminName'] = $record['firstName'] . " " . $record['lastName'];
             header("Location:admin.php");
         

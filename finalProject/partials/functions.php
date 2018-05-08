@@ -1,45 +1,5 @@
 <?php
 
-function displayCart() 
-{
-    if (isset($_SESSION['cart']))
-    {
-    
-        echo "<table class='table'>";
-        foreach ($_SESSION['cart'] as $item) 
-        {
-            $itemId = $item['id'];
-            $itemQuant = $item['quantity'];
-            
-            echo '<tr>';
-            
-            echo "<td><img src='" . $item['img'] . "' width'200' height='200'></td>";
-            echo "<td><h4>" . $item['name'] . "</h4></td>";
-            echo "<td><h4>$" . $item['price'] . "</h4></td>";
-            
-            echo '<form method="post">';
-            echo "<input type='hidden' name='itemId' value='$itemId'>";
-            echo "<td><input type='text' name='update' class='form-control' placeHolder='$itemQuant'></td>";
-            echo '<td><button class="btn btn-danger">Update</button></td>';
-            echo '</form>';
-            
-            echo "<form method='post'>";
-            echo "<input type='hidden' name='removeId' value='$itemId'>";
-            echo '<td><button class="btn btn-danger">Remove</button></td>';
-            echo '</form>';
-            
-            echo '</tr>';
-        }
-        echo "</table>";
-    }
-}
-
-
-
-function displayCartCount() 
-{
-    echo count($_SESSION['cart']);
-}
 function displayResults()
 {
     global $items;
@@ -81,27 +41,22 @@ function displayResults()
         echo "</table>";
     }
 }
-    function displayPlatforms()
-    {
+
+
+function displayAverage() {
         global $conn;
-        
-        $sql = "SELECT platformId, platformName FROM `platform` ORDER BY platformId";
-        
-        $stmt = $conn->prepare($sql);
-        $stmt->execute();
-        $records = $stmt->fetchAll(PDO::FETCH_ASSOC);
-        
-        //print_r($records);
-        
-        foreach ($records as $record) {
-            
-            echo "<option value='".$record["platformId"]."' >" . $record["platformName"] . "</option>";
-            
-        }
-        
-    }
-    
-    function displaySearchResults(){
+        $sql = "SELECT AVG(price) as avgPrice FROM product";
+        $statement = $conn->prepare($sql);
+        $statement->execute();
+        $average = $statement->fetch(PDO::FETCH_ASSOC);
+        print_r($average);
+        return $average;    
+}
+
+
+
+
+    function displaySearchResults() {
         global $conn;
         
         if (isset($_GET['searchForm'])) { //checks whether user has submitted the form
@@ -188,7 +143,28 @@ function displayResults()
             }
             echo '</table>';
         }
+    } 
+
+
+    function displayPlatforms()
+    {
+        global $conn;
+        
+        $sql = "SELECT platformId, platformName FROM `platform` ORDER BY platformId";
+        
+        $stmt = $conn->prepare($sql);
+        $stmt->execute();
+        $records = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        
+        //print_r($records);
+        
+        foreach ($records as $record) {
+            
+            echo "<option value='".$record["platformId"]."' >" . $record["platformName"] . "</option>";
+            
+        }
         
     }
+    
 
 ?>
